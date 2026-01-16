@@ -1,0 +1,15 @@
+import React from "react";
+import RightContent from "./RightContent"
+import LeftContent from "./LeftContent";
+
+
+const Page1Content = (props) => {
+  return (
+    <div className="pb-20 flex items-center gap-10 h-[90vh]  px-18">
+      <LeftContent />
+      <RightContent users={props.users} />
+    </div>
+  );
+};
+
+export default Page1Content;
