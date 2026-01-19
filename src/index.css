@@ -4,3 +4,15 @@
 #right::-webkit-scrollbar{
     display: none;
 }
+
+.div1{
+    height: 100vh;
+    width: 100vw;
+    background-color: pink;
+}
+.div2{    height: 100vh;
+    width: 100vw;
+    background-color: blue;}
+.div3{    height: 100vh;
+    width: 100vw;
+    background-color: cyan;}
