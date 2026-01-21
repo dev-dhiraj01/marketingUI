@@ -4,34 +4,30 @@ const Section2 = () => {
   const [num, setNum] = useState(0);
 
   const changeNum = () => {
-    setNum(num + 1);
+    setNum(prev => prev + 1);
   };
 const reset = () =>{
   setNum(0);
 }
 
-var [user,setUser] = useState({name:"Dhiraj", age:22});
-  let flag = true;
+const [user,setUser] = useState({name:"Dhiraj", age:22});
+const [flag, setFlag] = useState(true);
+
  const showUser = () => {
 
   if(flag){
-      const newUser = { ...user };
-      newUser.name = "Aman";
-      setUser(newUser);
-      flag = false;
-  }else if(flag == false){
-          const newUser2 = { ...user };
-          newUser2.name = "Dhiraj";
-          setUser(newUser2);
-          flag = true;
+      setUser(prev => ({...prev,name:"Aman"}));
+  }else{
+      setUser(prev => ({...prev,name:"Dhiraj"}));
   }
+  setFlag(!flag);
+ };
 
- }
   return (
     <div className="h-screen w-full bg-gray-950 text-white">
       <div className="flex justify-center items-center flex-wrap ">
         <input
-          className="h-10 w-full m-10"
+          className="h-10 border-2 w-full m-10"
           type="text"
           onChange={(e) => console.log(e.target.value)}
           placeholder="Enter Data"
