@@ -54,6 +54,7 @@ const Section2BottomContent = () => {
         <button
           type="submit"
           className="p-5 m-3 bg-cyan-500 text-white rounded"
+          onClick={handleSubmit}
         >
           Submit
         </button>
