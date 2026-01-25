@@ -29,7 +29,7 @@ const Section2TopContent = () => {
         <input
           className="h-10 border-2 w-full m-10"
           type="text"
-          onChange={(e) => console.log(e.target.value)}
+          // onChange={(e) => console.log(e.target.value)}
           placeholder="Enter Data"
         />
         <h1 className="text-white h-30 w-30 bg-gray-700 rounded-2xl flex justify-center items-center p-5 m-10">
