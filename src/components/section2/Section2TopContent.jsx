@@ -6,6 +6,7 @@ const Section2TopContent = () => {
 
     const changeNum = () => {
       setNum((prev) => prev + 1);
+      console.log(num);
     };
     const reset = () => {
       setNum(0);
