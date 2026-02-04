@@ -4,7 +4,7 @@ import Section2TopContent from "./Section2TopContent";
 const Section2 = () => {
   
   return (
-    <div className="h-screen w-full bg-gray-950 text-white">
+    <div className=" w-full bg-gray-950 text-white">
       <Section2TopContent />
       <Section2BottomContent />
     </div>

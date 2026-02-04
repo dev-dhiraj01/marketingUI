@@ -1,38 +1,48 @@
 import { useState } from "react";
 
 const Section2BottomContent = () => {
+  const [title, setTitle] = useState("");
 
-  const [title, setTitle] = useState('');
-    const handleSubmit = (e) => {
-      e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
-    };
   return (
-    <div>
-      <form className="p-5 m-10 bg-gray-600">
-        <input
-          className="p-5 m-3 text-sm border w-full"
-          type="text"
-          name="name"
-          placeholder="Enter Your Name"
-          value={title}
-          onChange={(e)=>{
-            setTitle(e.target.value);
-          }}
-        />
+    <div className="p-5 m-10 bg-gray-600">
+      <form className=" flex justify-between items-start  p-10">
+        <div className="flex w-1/2  gap-4 items-start flex-col ">
+          <input
+            className="p-5 m-3 w-full text-sm border "
+            type="text"
+            name="name"
+            placeholder="Enter Your Name"
+            value={title}
+            onChange={(e) => {
+              setTitle(e.target.value);
+            }}
+          />
 
-        <button
-          type="submit"
-          className="p-5 m-3 bg-cyan-500 text-white rounded-2xl"
-          onClick={(e) =>{
-            handleSubmit(e);
-          }}
-        >
-          Submit
-        </button>
+          <input type="text" className="p-5 m-3 w-full text-sm border " />
+          <button
+            type="submit"
+            className="p-5 m-3  bg-cyan-500 w-full text-white rounded-2xl"
+            onClick={(e) => {
+              handleSubmit(e);
+            }}
+          >
+            Submit
+          </button>
+        </div>
+        <div>
+          <img
+            className="h-80 rotate-y-180"
+            src="https://static.vecteezy.com/system/resources/thumbnails/049/578/155/small/a-black-and-white-drawing-of-a-man-writing-png.png"
+            alt="Notes"
+          />
+        </div>
       </form>
     </div>
   );
-}
+};
 
-export default Section2BottomContent
+export default Section2BottomContent;
